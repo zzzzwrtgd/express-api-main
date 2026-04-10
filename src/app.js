@@ -14,6 +14,11 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 const employees = require('./routes/employees');
+const user = require('./routes/user');
+
+
+
+app.use('/api/user', user);
 
 app.use('/api/employees', employees);
 
